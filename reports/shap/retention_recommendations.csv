@@ -1,0 +1,9 @@
+priority,feature,shap_value,recommendation,reason
+1,num__tenure,0.9811426,Introduce an onboarding and early-loyalty program.,Customer tenure is below the training-data average. Early engagement may help strengthen the relationship.
+2,cat__Contract_Month-to-month,0.6386029,Offer an annual contract incentive.,The customer has a month-to-month contract. A suitable long-term plan may improve retention.
+3,num__MonthlyCharges,0.22867972,Review the customer's subscription pricing.,Monthly charges are above the training-data average. Consider suitable plans or discounts.
+4,cat__OnlineSecurity_No,0.22657898,Offer an optional online security package.,The customer does not currently have online security.
+5,cat__PaymentMethod_Electronic check,0.1646915,Offer convenient automatic payment options.,The customer currently uses electronic check payment.
+6,cat__TechSupport_No,0.14142819,Offer a technical support package.,The customer does not currently have technical support.
+7,cat__OnlineBackup_No,0.06924462,Introduce available online backup services.,The customer does not currently have online backup.
+8,cat__DeviceProtection_No,0.0024668253,Explain the benefits of optional device protection.,The customer does not currently have device protection.

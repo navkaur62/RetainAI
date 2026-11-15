@@ -1,0 +1,46 @@
+feature,mean_absolute_shap,mean_shap
+cat__Contract_Month-to-month,0.7011466,-0.12165126
+num__tenure,0.5036869,-0.18726052
+num__MonthlyCharges,0.31344327,-0.15574627
+cat__OnlineSecurity_No,0.2592775,-0.05469161
+num__TotalCharges,0.22328703,-0.08155096
+cat__InternetService_Fiber optic,0.21280734,-0.047469277
+cat__Contract_Two year,0.18082675,-0.06638086
+cat__TechSupport_No,0.17853,-0.052759815
+cat__PaymentMethod_Electronic check,0.1746324,-0.029662495
+cat__MultipleLines_No,0.11303129,-0.0013812283
+cat__PaperlessBilling_No,0.10034751,-0.016891902
+cat__OnlineBackup_No,0.07478829,-0.009850662
+cat__Contract_One year,0.059952512,-0.024316564
+num__SeniorCitizen,0.05606307,-0.006404811
+cat__InternetService_DSL,0.055173524,-0.013743282
+cat__StreamingTV_Yes,0.049461115,-0.008784643
+cat__Dependents_No,0.048395447,-0.01290327
+cat__PaymentMethod_Mailed check,0.037752904,-0.008003304
+cat__StreamingMovies_Yes,0.035621323,-0.010272384
+cat__gender_Female,0.032807026,-0.0057279184
+cat__StreamingMovies_No,0.032128707,-0.003413215
+cat__PaymentMethod_Bank transfer (automatic),0.027853688,-0.007413628
+cat__StreamingTV_No,0.02738614,0.002858703
+cat__PaperlessBilling_Yes,0.027337277,-0.0054989173
+cat__PaymentMethod_Credit card (automatic),0.02709681,-0.012903915
+cat__Partner_No,0.023565928,0.0001311556
+cat__TechSupport_Yes,0.02232523,-0.004349363
+cat__PhoneService_No,0.018719226,-0.0066705695
+cat__Dependents_Yes,0.018112738,-0.0046206554
+cat__MultipleLines_Yes,0.01774852,-0.0056683803
+cat__InternetService_No,0.013657846,-0.0049219425
+cat__OnlineSecurity_Yes,0.013583405,-0.002050424
+cat__OnlineBackup_Yes,0.012502164,-0.002835463
+cat__PhoneService_Yes,0.010941866,-0.0017420372
+cat__Partner_Yes,0.01091113,0.0016460287
+cat__DeviceProtection_No,0.009991312,-0.003371246
+cat__gender_Male,0.00966767,-0.00028845292
+cat__DeviceProtection_Yes,0.0062277364,-0.0011822798
+cat__OnlineSecurity_No internet service,0.0045781494,-1.26806935e-05
+cat__OnlineBackup_No internet service,0.004176918,-0.0015888525
+cat__MultipleLines_No phone service,0.0021959965,-0.001073212
+cat__TechSupport_No internet service,0.0,0.0
+cat__DeviceProtection_No internet service,0.0,0.0
+cat__StreamingMovies_No internet service,0.0,0.0
+cat__StreamingTV_No internet service,0.0,0.0

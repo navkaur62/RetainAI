@@ -1,0 +1,13 @@
+feature,feature_value,shap_value,direction,absolute_impact
+cat__Contract_One year,0.0,-0.033799943,Reduces churn output,0.033799943
+cat__StreamingTV_Yes,0.0,-0.019122137,Reduces churn output,0.019122137
+cat__Partner_No,1.0,-0.01762446,Reduces churn output,0.01762446
+cat__StreamingTV_No,1.0,-0.016924359,Reduces churn output,0.016924359
+cat__PhoneService_No,0.0,-0.013320749,Reduces churn output,0.013320749
+cat__PhoneService_Yes,1.0,-0.007857198,Reduces churn output,0.007857198
+cat__gender_Male,0.0,-0.003984427,Reduces churn output,0.003984427
+cat__PaymentMethod_Credit card (automatic),0.0,-0.0034380453,Reduces churn output,0.0034380453
+cat__DeviceProtection_Yes,0.0,-0.0033880484,Reduces churn output,0.0033880484
+cat__MultipleLines_No phone service,0.0,-0.0032753209,Reduces churn output,0.0032753209
+cat__PaymentMethod_Bank transfer (automatic),0.0,-0.003253486,Reduces churn output,0.003253486
+cat__PaymentMethod_Mailed check,0.0,-0.001922332,Reduces churn output,0.001922332

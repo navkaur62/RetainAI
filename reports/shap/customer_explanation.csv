@@ -1,0 +1,46 @@
+feature,feature_value,shap_value,direction,absolute_impact
+num__tenure,-1.2816237461508113,0.9811426,Increases churn output,0.9811426
+cat__Contract_Month-to-month,1.0,0.6386029,Increases churn output,0.6386029
+num__TotalCharges,-0.9716027830122491,0.26167935,Increases churn output,0.26167935
+num__MonthlyCharges,0.667653943018573,0.22867972,Increases churn output,0.22867972
+cat__OnlineSecurity_No,1.0,0.22657898,Increases churn output,0.22657898
+cat__InternetService_Fiber optic,1.0,0.18416283,Increases churn output,0.18416283
+num__SeniorCitizen,2.2636062032690805,0.17769998,Increases churn output,0.17769998
+cat__PaymentMethod_Electronic check,1.0,0.1646915,Increases churn output,0.1646915
+cat__MultipleLines_No,0.0,0.15796429,Increases churn output,0.15796429
+cat__TechSupport_No,1.0,0.14142819,Increases churn output,0.14142819
+cat__PaperlessBilling_No,0.0,0.099236004,Increases churn output,0.099236004
+cat__OnlineBackup_No,1.0,0.06924462,Increases churn output,0.06924462
+cat__InternetService_DSL,0.0,0.06915047,Increases churn output,0.06915047
+cat__Contract_Two year,0.0,0.057149615,Increases churn output,0.057149615
+cat__StreamingMovies_No,0.0,0.034398798,Increases churn output,0.034398798
+cat__Contract_One year,0.0,-0.033799943,Reduces churn output,0.033799943
+cat__Dependents_No,1.0,0.02690196,Increases churn output,0.02690196
+cat__StreamingTV_Yes,0.0,-0.019122137,Reduces churn output,0.019122137
+cat__Partner_No,1.0,-0.01762446,Reduces churn output,0.01762446
+cat__StreamingMovies_Yes,1.0,0.01693126,Increases churn output,0.01693126
+cat__StreamingTV_No,1.0,-0.016924359,Reduces churn output,0.016924359
+cat__PaperlessBilling_Yes,1.0,0.0149392355,Increases churn output,0.0149392355
+cat__PhoneService_No,0.0,-0.013320749,Reduces churn output,0.013320749
+cat__Dependents_Yes,0.0,0.0133012235,Increases churn output,0.0133012235
+cat__MultipleLines_Yes,1.0,0.013084235,Increases churn output,0.013084235
+cat__TechSupport_Yes,0.0,0.012595484,Increases churn output,0.012595484
+cat__OnlineSecurity_Yes,0.0,0.011296362,Increases churn output,0.011296362
+cat__gender_Female,1.0,0.010916166,Increases churn output,0.010916166
+cat__PhoneService_Yes,1.0,-0.007857198,Reduces churn output,0.007857198
+cat__InternetService_No,0.0,0.006284386,Increases churn output,0.006284386
+cat__gender_Male,0.0,-0.003984427,Reduces churn output,0.003984427
+cat__PaymentMethod_Credit card (automatic),0.0,-0.0034380453,Reduces churn output,0.0034380453
+cat__DeviceProtection_Yes,0.0,-0.0033880484,Reduces churn output,0.0033880484
+cat__MultipleLines_No phone service,0.0,-0.0032753209,Reduces churn output,0.0032753209
+cat__PaymentMethod_Bank transfer (automatic),0.0,-0.003253486,Reduces churn output,0.003253486
+cat__DeviceProtection_No,1.0,0.0024668253,Increases churn output,0.0024668253
+cat__PaymentMethod_Mailed check,0.0,-0.001922332,Reduces churn output,0.001922332
+cat__OnlineBackup_Yes,0.0,0.0013753179,Increases churn output,0.0013753179
+cat__OnlineSecurity_No internet service,0.0,0.00074166566,Increases churn output,0.00074166566
+cat__OnlineBackup_No internet service,0.0,0.00061587745,Increases churn output,0.00061587745
+cat__Partner_Yes,0.0,0.00017088762,Increases churn output,0.00017088762
+cat__TechSupport_No internet service,0.0,0.0,Reduces churn output,0.0
+cat__DeviceProtection_No internet service,0.0,0.0,Reduces churn output,0.0
+cat__StreamingMovies_No internet service,0.0,0.0,Reduces churn output,0.0
+cat__StreamingTV_No internet service,0.0,0.0,Reduces churn output,0.0
