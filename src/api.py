@@ -9,7 +9,7 @@ import pandas as pd
 
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, ConfigDict, Field
-
+from src.investigation_assistant import generate_investigation
 
 # --------------------------------------------------
 # CONFIGURATION
@@ -386,4 +386,33 @@ def explain_customer(customer: CustomerInput):
         raise HTTPException(
             status_code=500,
             detail=f"Explanation failed: {str(error)}"
+        )
+
+
+
+# --------------------------------------------------
+# LOCAL CUSTOMER INVESTIGATION ENDPOINT
+# --------------------------------------------------
+
+@app.post("/investigate")
+def investigate_customer(customer: CustomerInput):
+
+    try:
+        # Generate the existing model prediction and SHAP explanation
+        explanation_response = explain_customer(customer)
+
+        # Convert the explanation into a dictionary
+        investigation = generate_investigation(
+            explanation_response
+        )
+
+        return investigation
+
+    except HTTPException:
+        raise
+
+    except Exception as error:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Investigation failed: {str(error)}"
         )
