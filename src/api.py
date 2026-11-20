@@ -6,7 +6,7 @@ from pathlib import Path
 
 import joblib
 import pandas as pd
-
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, ConfigDict, Field
 from src.investigation_assistant import generate_investigation
@@ -51,7 +51,16 @@ app = FastAPI(
     description="Customer Churn Prediction and Retention API",
     version="1.0.0"
 )
-
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # --------------------------------------------------
 # LOAD TRAINED MODEL
