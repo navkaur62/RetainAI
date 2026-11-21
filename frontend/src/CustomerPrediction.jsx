@@ -3,7 +3,7 @@ import { useState } from "react";
 import { predictCustomer } from "./services/api";
 import "./CustomerPrediction.css";
 
-const initialForm = {
+export const initialForm = {
   gender: "Male",
   SeniorCitizen: 0,
   Partner: "Yes",
@@ -99,40 +99,44 @@ const numberFields = [
   { name: "TotalCharges", label: "Total Charges", min: 0 },
 ];
 
-function CustomerPrediction() {
-  const [form, setForm] = useState(initialForm);
-  const [result, setResult] = useState(null);
+function CustomerPrediction({
+  customerData,
+  setCustomerData,
+  predictionResult,
+  setPredictionResult,
+}) {
+  const form = customerData;
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
   const handleChange = (event) => {
-    const { name, value } = event.target;
+  const { name, value } = event.target;
 
-    setForm((previous) => ({
-      ...previous,
-      [name]:
-        name === "SeniorCitizen" ||
-        name === "tenure" ||
-        name === "MonthlyCharges" ||
-        name === "TotalCharges"
-          ? Number(value)
-          : value,
-    }));
+  setCustomerData((previous) => ({
+    ...previous,
+    [name]:
+      name === "SeniorCitizen" ||
+      name === "tenure" ||
+      name === "MonthlyCharges" ||
+      name === "TotalCharges"
+        ? Number(value)
+        : value,
+  }));
 
-    setResult(null);
-    setError("");
-  };
+  setPredictionResult(null);
+  setError("");
+};
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     setLoading(true);
     setError("");
-    setResult(null);
+    setPredictionResult(null);
 
     try {
       const response = await predictCustomer(form);
-      setResult(response);
+      setPredictionResult(response);
     } catch (err) {
       setError(
         err.response?.data?.detail ||
@@ -216,35 +220,36 @@ function CustomerPrediction() {
         </div>
       )}
 
-      {result && (
+      
+      {predictionResult && (
         <div className="prediction-result">
           <h2>Prediction Result</h2>
 
-          <div className="result-details">
-            <div>
-              <span>Prediction</span>
-              <strong>{result.prediction_label}</strong>
-            </div>
-
-            <div>
-              <span>Churn Probability</span>
-              <strong>
-                {(result.churn_probability * 100).toFixed(2)}%
-              </strong>
-            </div>
-
-            <div>
-              <span>Model</span>
-              <strong>{result.model}</strong>
-            </div>
-          </div>
-
-          <p className="prediction-disclaimer">
-            {result.disclaimer ||
-              "Educational prediction only; not a final business decision."}
-          </p>
+        <div className="result-details">
+         <div>
+          <span>Prediction</span>
+           <strong>{predictionResult.prediction_label}</strong>
         </div>
-      )}
+
+        <div>
+           <span>Churn Probability</span>
+            <strong>
+              {(predictionResult.churn_probability * 100).toFixed(2)}%
+            </strong>
+        </div>
+
+        <div>
+           <span>Model</span>
+             <strong>{predictionResult.model}</strong>
+        </div>
+    </div>
+
+    <p className="prediction-disclaimer">
+      {predictionResult.disclaimer ||
+        "Educational prediction only; not a final business decision."}
+    </p>
+  </div>
+)}
     </div>
   );
 }

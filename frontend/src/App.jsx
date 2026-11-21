@@ -26,8 +26,11 @@ import {
   Sparkles,
   Database,
 } from "lucide-react";
+import CustomerPrediction, {
+  initialForm,
+} from "./CustomerPrediction";
 
-import CustomerPrediction from "./CustomerPrediction";
+import CustomerExplainability from "./CustomerExplainability";
 import "./App.css";
 
 const modelComparisonData = [
@@ -76,7 +79,8 @@ const selectedModelMetrics = [
 function App() {
   const [activePage, setActivePage] = useState("Overview");
   const [sidebarOpen, setSidebarOpen] = useState(false);
-
+  const [customerData, setCustomerData] = useState(initialForm);
+  const [predictionResult, setPredictionResult] = useState(null);
   const navigation = [
     { name: "Overview", icon: LayoutDashboard },
     { name: "Churn Prediction", icon: Users },
@@ -576,30 +580,20 @@ function App() {
 
           {/* PAGE 2: CUSTOMER PREDICTION */}
           {activePage === "Churn Prediction" && (
-            <CustomerPrediction />
+            <CustomerPrediction
+              customerData={customerData}
+              setCustomerData={setCustomerData}
+              predictionResult={predictionResult}
+              setPredictionResult={setPredictionResult}
+            />
           )}
 
           {/* PAGE 3: EXPLAINABILITY */}
           {activePage === "Explainability" && (
-            <div className="placeholder-panel">
-              <div className="placeholder-icon">
-                <BrainCircuit size={32} />
-              </div>
-
-              <h2>Explainability</h2>
-
-              <p>
-                This module will be connected to your SHAP
-                explainability API in the upcoming steps.
-              </p>
-
-              <button
-                className="back-button"
-                onClick={() => setActivePage("Overview")}
-              >
-                Back to Overview
-              </button>
-            </div>
+            <CustomerExplainability
+              customerData={customerData}
+              predictionResult={predictionResult}
+            />
           )}
 
           {/* PAGE 4: INVESTIGATION */}
