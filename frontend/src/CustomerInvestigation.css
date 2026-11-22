@@ -1,0 +1,144 @@
+
+.investigation-page {
+  width: 100%;
+  color: #f1f5f9;
+}
+
+.investigation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.investigation-header h1 {
+  margin-bottom: 8px;
+  font-size: 28px;
+}
+
+.investigation-header p {
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+.investigate-button {
+  background: #6366f1;
+  color: white;
+  border: none;
+  padding: 13px 20px;
+  border-radius: 9px;
+  cursor: pointer;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.investigate-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.investigation-card {
+  background: #151b2b;
+  border: 1px solid #293247;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.investigation-card h2 {
+  font-size: 19px;
+  margin-bottom: 18px;
+}
+
+.investigation-card p,
+.investigation-card li {
+  color: #cbd5e1;
+  line-height: 1.7;
+}
+
+.investigation-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+  margin-top: 24px;
+}
+
+.investigation-stats div {
+  background: #202a3d;
+  padding: 18px;
+  border-radius: 9px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.investigation-stats span,
+.evidence-item span {
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.investigation-stats strong {
+  font-size: 18px;
+}
+
+.evidence-item,
+.recommendation-item {
+  background: #202a3d;
+  border-radius: 9px;
+  padding: 18px;
+  margin-bottom: 13px;
+}
+
+.evidence-item h3,
+.recommendation-item h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.evidence-item span {
+  display: block;
+  margin-top: 8px;
+}
+
+.investigation-card ul {
+  padding-left: 22px;
+}
+
+.investigation-card li {
+  margin-bottom: 12px;
+}
+
+.human-review-notice {
+  margin-top: 20px;
+  padding: 14px;
+  border-left: 3px solid #f59e0b;
+  background: #29251e;
+  border-radius: 5px;
+}
+
+.investigation-error {
+  background: #3b1e29;
+  color: #fecaca;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.assistant-type {
+  color: #94a3b8;
+  font-size: 13px;
+  margin-top: 16px;
+}
+
+@media (max-width: 700px) {
+  .investigation-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .investigation-stats {
+    grid-template-columns: 1fr;
+  }
+}

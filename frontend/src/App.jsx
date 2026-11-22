@@ -31,6 +31,7 @@ import CustomerPrediction, {
 } from "./CustomerPrediction";
 
 import CustomerExplainability from "./CustomerExplainability";
+import CustomerInvestigation from "./CustomerInvestigation";
 import "./App.css";
 
 const modelComparisonData = [
@@ -597,26 +598,11 @@ function App() {
           )}
 
           {/* PAGE 4: INVESTIGATION */}
+          
           {activePage === "Investigation" && (
-            <div className="placeholder-panel">
-              <div className="placeholder-icon">
-                <ShieldCheck size={32} />
-              </div>
-
-              <h2>Investigation</h2>
-
-              <p>
-                This module will be connected to your local
-                investigation assistant in the upcoming steps.
-              </p>
-
-              <button
-                className="back-button"
-                onClick={() => setActivePage("Overview")}
-              >
-                Back to Overview
-              </button>
-            </div>
+            <CustomerInvestigation
+               customerData={customerData}
+            />
           )}
 
           {/* FOOTER */}
