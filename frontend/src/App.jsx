@@ -32,6 +32,7 @@ import CustomerPrediction, {
 
 import CustomerExplainability from "./CustomerExplainability";
 import CustomerInvestigation from "./CustomerInvestigation";
+import SettingsPage from "./Settings";
 import "./App.css";
 
 const modelComparisonData = [
@@ -172,9 +173,15 @@ function App() {
         <div className="sidebar-bottom">
           <div className="nav-label">PREFERENCES</div>
 
-          <button className="nav-item">
+          <button
+            className={`nav-item ${activePage === "Settings" ? "active" : ""}`}
+            onClick={() => {
+              setActivePage("Settings");
+               setSidebarOpen(false);
+            }}
+          >
             <Settings size={19} />
-            <span>Settings</span>
+           <span>Settings</span>
           </button>
 
           <div className="sidebar-profile">
@@ -604,7 +611,7 @@ function App() {
                customerData={customerData}
             />
           )}
-
+          {activePage === "Settings" && <SettingsPage />}
           {/* FOOTER */}
           <footer className="footer">
             <span>RetainAI © 2026</span>
