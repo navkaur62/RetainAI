@@ -6,13 +6,7 @@
 
 An end-to-end machine learning application that predicts customer churn, explains the prediction with SHAP, and suggests retention actions through a FastAPI backend and a React dashboard.
 
-![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?logo=fastapi&logoColor=white)
-![XGBoost](https://img.shields.io/badge/XGBoost-Model-EC6B23)
-![SHAP](https://img.shields.io/badge/SHAP-Explainability-6C63FF)
-![React](https://img.shields.io/badge/React-Frontend-61DAFB?logo=react&logoColor=black)
-![Vite](https://img.shields.io/badge/Vite-Build-646CFF?logo=vite&logoColor=white)
-![Pytest](https://img.shields.io/badge/Tests-3%20passing-brightgreen?logo=pytest&logoColor=white)
+**Python 3.12** &nbsp;|&nbsp; **FastAPI** &nbsp;|&nbsp; **XGBoost** &nbsp;|&nbsp; **SHAP** &nbsp;|&nbsp; **React + Vite** &nbsp;|&nbsp; **Pytest (3 tests passing)**
 
 </div>
 
@@ -76,13 +70,6 @@ The model is trained on the public **IBM Telco Customer Churn** dataset. RetainA
 
 **Backend and Machine Learning**
 
-![Python](https://img.shields.io/badge/Python_3.12.10-3776AB?logo=python&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?logo=numpy&logoColor=white)
-![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?logo=scikitlearn&logoColor=white)
-![XGBoost](https://img.shields.io/badge/XGBoost-EC6B23)
-![SHAP](https://img.shields.io/badge/SHAP-6C63FF)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)
 
 | Area | Technologies |
 |---|---|
@@ -107,21 +94,38 @@ The model is trained on the public **IBM Telco Customer Churn** dataset. RetainA
 
 ## 4. Project Architecture
 
-```mermaid
-flowchart LR
-    U[User] --> F[React + Vite Frontend]
-    F -->|Axios HTTP requests| A[FastAPI Backend<br/>src/api.py]
-
-    A --> M[(Trained XGBoost Pipeline<br/>models/*.joblib)]
-    A --> E[SHAP Explainability<br/>src/explainability.py]
-    A --> R[Retention Recommendations<br/>src/recommendations.py]
-    A --> I[Investigation Assistant<br/>src/investigation_assistant.py]
-
-    E --> M
-    R --> E
-    I --> M
-    I --> E
-    I --> R
+```text
++-----------+      +------------------------------+
+|   User    | ---> |   React + Vite Frontend      |
++-----------+      |   (Axios, Recharts, Lucide)  |
+                   +--------------+---------------+
+                                  |  HTTP requests (JSON)
+                                  v
+                   +------------------------------+
+                   |   FastAPI Backend            |
+                   |   src/api.py                 |
+                   |   /  /health  /predict       |
+                   |   /explain  /investigate     |
+                   +--------------+---------------+
+                                  |
+        +-------------------------+-------------------------+
+        |                         |                         |
+        v                         v                         v
++----------------+     +--------------------+     +------------------------+
+| Trained model  |     | SHAP explainability|     | Retention              |
+| pipeline       |<----| src/explainability |---->| recommendations        |
+| models/*.joblib|     | .py                |     | src/recommendations.py |
++-------+--------+     +----------+---------+     +-----------+------------+
+        |                         |                           |
+        +-------------------------+---------------------------+
+                                  |
+                                  v
+                   +------------------------------+
+                   |   Local rule-based           |
+                   |   investigation assistant    |
+                   |   src/investigation_         |
+                   |   assistant.py               |
+                   +------------------------------+
 ```
 
 **Request flow**
@@ -528,6 +532,8 @@ The production build completed successfully. A non-fatal warning about a large J
 
 The following are possible enhancements, not existing functionality:
 
+- Deploy the React frontend.
+- Deploy the FastAPI backend.
 - Optimise the frontend bundle size.
 - Expand automated test coverage.
 - Add additional customer analytics.
