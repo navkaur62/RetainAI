@@ -1,4 +1,8 @@
+
+
 <div align="center">
+
+<img src="docs/banner.svg" alt="RetainAI banner" width="100%">
 
 # RetainAI
 
@@ -6,7 +10,7 @@
 
 An end-to-end machine learning application that predicts customer churn, explains the prediction with SHAP, and suggests retention actions through a FastAPI backend and a React dashboard.
 
-**Python 3.12** &nbsp;|&nbsp; **FastAPI** &nbsp;|&nbsp; **XGBoost** &nbsp;|&nbsp; **SHAP** &nbsp;|&nbsp; **React + Vite** &nbsp;|&nbsp; **Pytest (3 tests passing)**
+🟦 **Python 3.12** &nbsp; 🟩 **FastAPI** &nbsp; 🟧 **XGBoost** &nbsp; 🟪 **SHAP** &nbsp; 🟦 **React + Vite** &nbsp; 🟩 **Pytest (3 passing)**
 
 </div>
 
@@ -14,30 +18,30 @@ An end-to-end machine learning application that predicts customer churn, explain
 
 ## Table of Contents
 
-1. [Project Overview](#1-project-overview)
-2. [Key Features](#2-key-features)
-3. [Technology Stack](#3-technology-stack)
-4. [Project Architecture](#4-project-architecture)
-5. [Machine Learning Workflow](#5-machine-learning-workflow)
-6. [Model Evaluation Results](#6-model-evaluation-results)
-7. [SHAP Explainability](#7-shap-explainability)
-8. [Retention Recommendations](#8-retention-recommendations)
-9. [Local Investigation Assistant](#9-local-investigation-assistant)
-10. [FastAPI Endpoints](#10-fastapi-endpoints)
-11. [Frontend Functionality](#11-frontend-functionality)
-12. [Project Structure](#12-project-structure)
-13. [Installation and Setup](#13-installation-and-setup)
-14. [Running the Application](#14-running-the-application)
-15. [API Documentation](#15-api-documentation)
-16. [Testing](#16-testing)
-17. [Important Limitations](#17-important-limitations)
-18. [Development Progress](#18-development-progress)
-19. [Future Improvements](#19-future-improvements)
-20. [Author](#20-author)
+1. [📌 Project Overview](#-1-project-overview)
+2. [✨ Key Features](#-2-key-features)
+3. [🧰 Technology Stack](#-3-technology-stack)
+4. [🧱 Project Architecture](#-4-project-architecture)
+5. [🔬 Machine Learning Workflow](#-5-machine-learning-workflow)
+6. [📊 Model Evaluation Results](#-6-model-evaluation-results)
+7. [🔍 SHAP Explainability](#-7-shap-explainability)
+8. [💡 Retention Recommendations](#-8-retention-recommendations)
+9. [📋 Local Investigation Assistant](#-9-local-investigation-assistant)
+10. [🔌 FastAPI Endpoints](#-10-fastapi-endpoints)
+11. [🎨 Frontend Functionality](#-11-frontend-functionality)
+12. [📁 Project Structure](#-12-project-structure)
+13. [📦 Installation and Setup](#-13-installation-and-setup)
+14. [🚀 Running the Application](#-14-running-the-application)
+15. [📖 API Documentation](#-15-api-documentation)
+16. [🧪 Testing](#-16-testing)
+17. [🚧 Important Limitations](#-17-important-limitations)
+18. [📈 Development Progress](#-18-development-progress)
+19. [🔮 Future Improvements](#-19-future-improvements)
+20. [👤 Author](#-20-author)
 
 ---
 
-## 1. Project Overview
+## 📌 1. Project Overview
 
 Customer churn, when a customer stops using a service, is a costly problem for subscription-based businesses. **RetainAI** is a machine learning application that:
 
@@ -52,21 +56,21 @@ The model is trained on the public **IBM Telco Customer Churn** dataset. RetainA
 
 ---
 
-## 2. Key Features
+## ✨ 2. Key Features
 
 | Feature | Description |
 |---|---|
-| **Churn prediction** | An XGBoost classifier predicts churn and returns the churn probability. |
-| **SHAP explainability** | Shows which features pushed a prediction towards or away from churn. |
-| **Retention recommendations** | Rule-based suggestions generated from churn-related factors and explainability results. |
-| **Investigation assistant** | A local, rule-based assistant that produces a structured investigation summary. |
-| **REST API** | FastAPI backend with interactive Swagger documentation. |
-| **React dashboard** | Pages for prediction, explainability, investigation, and backend health/settings. |
-| **Automated tests** | Pytest tests for the investigation assistant logic. |
+| 🎯 **Churn prediction** | An XGBoost classifier predicts churn and returns the churn probability. |
+| 🔍 **SHAP explainability** | Shows which features pushed a prediction towards or away from churn. |
+| 💡 **Retention recommendations** | Rule-based suggestions generated from churn-related factors and explainability results. |
+| 🧾 **Investigation assistant** | A local, rule-based assistant that produces a structured investigation summary. |
+| 🔌 **REST API** | FastAPI backend with interactive Swagger documentation. |
+| 📊 **React dashboard** | Pages for prediction, explainability, investigation, and backend health/settings. |
+| 🧪 **Automated tests** | Pytest tests for the investigation assistant logic. |
 
 ---
 
-## 3. Technology Stack
+## 🧰 3. Technology Stack
 
 **Backend and Machine Learning**
 
@@ -92,7 +96,7 @@ The model is trained on the public **IBM Telco Customer Churn** dataset. RetainA
 
 ---
 
-## 4. Project Architecture
+## 🧱 4. Project Architecture
 
 ```text
 +-----------+      +------------------------------+
@@ -138,7 +142,7 @@ The model is trained on the public **IBM Telco Customer Churn** dataset. RetainA
 
 ---
 
-## 5. Machine Learning Workflow
+## 🔬 5. Machine Learning Workflow
 
 **Dataset:** IBM Telco Customer Churn (`Telco-Customer-Churn.csv`), expected at `data/raw/Telco-Customer-Churn.csv`.
 
@@ -159,19 +163,19 @@ Trained artifacts used by the backend:
 
 ---
 
-## 6. Model Evaluation Results
+## 📊 6. Model Evaluation Results
 
 ### Final held-out test metrics
 
 Source: `reports/model/test_metrics.json`
 
-| Metric | Score |
-|---|---:|
-| Accuracy | 75.4436% |
-| Precision | 52.5455% |
-| Recall | 77.2727% |
-| F1-Score | 62.5541% |
-| ROC-AUC | 84.1918% |
+| Metric | Score | Visual (each block = 10%) |
+|---|---:|:---|
+| Accuracy | 75.4436% | 🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜ |
+| Precision | 52.5455% | 🟩🟩🟩🟩🟩⬜⬜⬜⬜⬜ |
+| Recall | 77.2727% | 🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜ |
+| F1-Score | 62.5541% | 🟩🟩🟩🟩🟩🟩⬜⬜⬜⬜ |
+| ROC-AUC | 84.1918% | 🟩🟩🟩🟩🟩🟩🟩🟩⬜⬜ |
 
 ### Model comparison
 
@@ -183,7 +187,7 @@ The model has a higher recall than precision. It identifies most customers who c
 
 ---
 
-## 7. SHAP Explainability
+## 🔍 7. SHAP Explainability
 
 RetainAI uses **SHAP (SHapley Additive exPlanations)** to explain individual model predictions. The explainability module (`src/explainability.py`):
 
@@ -194,11 +198,12 @@ RetainAI uses **SHAP (SHapley Additive exPlanations)** to explain individual mod
 
 Features that are important in this dataset include `Tenure`, `Contract`, `MonthlyCharges`, `TotalCharges`, `InternetService`, `PaymentMethod`, `OnlineSecurity`, and `TechSupport`.
 
-> **Note:** SHAP values describe how much each feature contributed to the **model's** output. They do **not** prove that a feature causes a customer to churn.
+> [!NOTE]
+> SHAP values describe how much each feature contributed to the **model's** output. They do **not** prove that a feature causes a customer to churn.
 
 ---
 
-## 8. Retention Recommendations
+## 💡 8. Retention Recommendations
 
 `src/recommendations.py` generates retention suggestions based on churn-related factors and explainability results. Examples include:
 
@@ -213,7 +218,7 @@ These are **suggestions that require human review**. The application does not ch
 
 ---
 
-## 9. Local Investigation Assistant
+## 📋 9. Local Investigation Assistant
 
 `src/investigation_assistant.py` is a **local, rule-based** investigation assistant. It is **not** a generative AI assistant or an LLM, and it does not require a paid OpenAI API or any external AI API.
 
@@ -230,7 +235,7 @@ The assistant **never modifies or overrides** the original machine learning pred
 
 ---
 
-## 10. FastAPI Endpoints
+## 🔌 10. FastAPI Endpoints
 
 The backend is implemented in `src/api.py`.
 
@@ -263,11 +268,12 @@ The backend is implemented in `src/api.py`.
 | Model | `XGBClassifier` |
 | Threshold | `0.5` |
 
+> [!NOTE]
 > This is a single test result for illustration only. It is not a fixed or universal prediction.
 
 ---
 
-## 11. Frontend Functionality
+## 🎨 11. Frontend Functionality
 
 The frontend is built with React and Vite and communicates with the FastAPI backend using Axios. Charts use Recharts and icons use Lucide React.
 
@@ -282,7 +288,7 @@ Other frontend files include `App.jsx`, `main.jsx`, `App.css`, `index.css`, a CS
 
 ---
 
-## 12. Project Structure
+## 📁 12. Project Structure
 
 Simplified structure. Not every directory or file is tracked by Git (see [Important Limitations](#17-important-limitations)).
 
@@ -344,9 +350,10 @@ RetainAI/
 
 ---
 
-## 13. Installation and Setup
+## 📦 13. Installation and Setup
 
-> **Important:** Cloning this repository alone is **not** enough to run the full application. The dataset and trained model files are excluded from Git, so you must prepare them first (steps 4 and 5).
+> [!IMPORTANT]
+> Cloning this repository alone is **not** enough to run the full application. The dataset and trained model files are excluded from Git, so you must prepare them first (steps 4 and 5).
 
 **Prerequisites:** Python 3.12, Node.js with npm, Git, and Windows PowerShell.
 
@@ -421,9 +428,10 @@ VITE_API_BASE_URL=http://127.0.0.1:8000
 
 ---
 
-## 14. Running the Application
+## 🚀 14. Running the Application
 
-The backend and frontend must **both** be running for the application to work.
+> [!TIP]
+> The backend and frontend must **both** be running for the application to work. Start the backend first.
 
 **Terminal 1: backend** (from the project root, with the virtual environment active)
 
@@ -453,7 +461,7 @@ npm run build
 
 ---
 
-## 15. API Documentation
+## 📖 15. API Documentation
 
 FastAPI generates interactive Swagger documentation. With the backend running, open:
 
@@ -465,7 +473,7 @@ From there you can inspect request and response schemas and try each endpoint (`
 
 ---
 
-## 16. Testing
+## 🧪 16. Testing
 
 ### Backend tests
 
@@ -493,11 +501,15 @@ npm run build
 
 The production build completed successfully. A non-fatal warning about a large JavaScript bundle was shown; bundle optimisation has **not** been done yet.
 
+> [!NOTE]
 > ESLint and other additional checks have not been run or verified.
 
 ---
 
-## 17. Important Limitations
+## 🚧 17. Important Limitations
+
+> [!WARNING]
+> RetainAI is a portfolio project that runs locally. It is not production-ready and its predictions and recommendations must be reviewed by a human.
 
 - **A fresh clone cannot run the full app.** The raw dataset (`data/raw/`), processed datasets, and trained model artifacts (`models/*.joblib`) are excluded by `.gitignore`. Only `models/.gitkeep` is tracked. You must obtain the dataset and run the training notebooks to generate the model files.
 - **Dataset scope.** The model is trained on the public IBM Telco Customer Churn dataset, not live customer data. Performance on other customer populations is unknown.
@@ -511,24 +523,24 @@ The production build completed successfully. A non-fatal warning about a large J
 
 ---
 
-## 18. Development Progress
+## 📈 18. Development Progress
 
 | Phase | Description | Status |
 |---|---|---|
-| 1–3 | Project setup, EDA, data cleaning and preprocessing | Completed |
-| 4 | Machine learning model development | Completed |
-| 5 | SHAP explainability and retention recommendations | Completed |
-| 6 | FastAPI backend integration | Completed |
-| 7 | Local rule-based investigation assistant | Completed |
-| 8 | React dashboard integration | Completed |
-| 9 | Investigation frontend | Completed |
-| 10 | Settings and backend health monitoring | Completed |
-| 11 | Testing and quality checks | Completed |
-| 12 | Documentation and deployment preparation | In Progress |
+| 1–3 | Project setup, EDA, data cleaning and preprocessing | 🟢 Completed |
+| 4 | Machine learning model development | 🟢 Completed |
+| 5 | SHAP explainability and retention recommendations | 🟢 Completed |
+| 6 | FastAPI backend integration | 🟢 Completed |
+| 7 | Local rule-based investigation assistant | 🟢 Completed |
+| 8 | React dashboard integration | 🟢 Completed |
+| 9 | Investigation frontend | 🟢 Completed |
+| 10 | Settings and backend health monitoring | 🟢 Completed |
+| 11 | Testing and quality checks | 🟢 Completed |
+| 12 | Documentation and deployment preparation | 🟡 In Progress |
 
 ---
 
-## 19. Future Improvements
+## 🔮 19. Future Improvements
 
 The following are possible enhancements, not existing functionality:
 
@@ -542,7 +554,7 @@ The following are possible enhancements, not existing functionality:
 
 ---
 
-## 20. Author
+## 👤 20. Author
 
 **Navdeep Kaur**
 
