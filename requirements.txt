@@ -1,5 +1,4 @@
-@'
-numpy==2.5.4
+﻿numpy==2.5.4
 pandas==3.1.0
 matplotlib==3.11.2
 seaborn==0.13.2
@@ -13,4 +12,3 @@ pydantic==2.14.3
 python-dotenv==1.2.4
 pytest==9.2.0
 jupyter==1.1.1
-'@ | Set-Content -Encoding utf8 .\requirements.txt
