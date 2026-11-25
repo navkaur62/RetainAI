@@ -4,9 +4,6 @@
 
 <img src="docs/banner.svg" alt="RetainAI banner" width="100%">
 
-# RetainAI
-
-### Customer Churn Prediction, Explainability & Retention Assistant
 
 An end-to-end machine learning application that predicts customer churn, explains the prediction with SHAP, and suggests retention actions through a FastAPI backend and a React dashboard.
 
@@ -536,7 +533,7 @@ The production build completed successfully. A non-fatal warning about a large J
 | 9 | Investigation frontend | 🟢 Completed |
 | 10 | Settings and backend health monitoring | 🟢 Completed |
 | 11 | Testing and quality checks | 🟢 Completed |
-| 12 | Documentation and deployment preparation | 🟡 In Progress |
+| 12 | Documentation and deployment preparation | 🟢 Completed |
 
 ---
 
