@@ -49,6 +49,10 @@ Customer churn, when a customer stops using a service, is a costly problem for s
 
 The project combines Machine Learning, Explainable AI (SHAP), a Python/FastAPI backend, a React dashboard, and a local rule-based investigation assistant. Its purpose is to demonstrate an end-to-end machine learning application integrated with a full-stack web interface.
 
+**Live application:** [RetainAI Dashboard](https://retain-ai-pi-blond.vercel.app/)
+
+**Backend API:** [RetainAI API](https://retainai-api.onrender.com/) · [Interactive API Documentation](https://retainai-api.onrender.com/docs)
+
 The model is trained on the public **IBM Telco Customer Churn** dataset. RetainAI is a learning and portfolio project and does not use live customer data.
 
 ---
@@ -506,16 +510,15 @@ The production build completed successfully. A non-fatal warning about a large J
 ## 🚧 17. Important Limitations
 
 > [!WARNING]
-> RetainAI is a portfolio project that runs locally. It is not production-ready and its predictions and recommendations must be reviewed by a human.
+> RetainAI is a deployed portfolio project, not a production-ready business decision system. Its predictions and recommendations must be reviewed by a human.
 
-- **A fresh clone cannot run the full app.** The raw dataset (`data/raw/`), processed datasets, and trained model artifacts (`models/*.joblib`) are excluded by `.gitignore`. Only `models/.gitkeep` is tracked. You must obtain the dataset and run the training notebooks to generate the model files.
+- **A fresh clone cannot reproduce the full training workflow immediately.** The raw dataset (`data/raw/`) and processed datasets are excluded by `.gitignore`. The trained model pipeline is included in the repository for the deployed backend; the separate preprocessor artifact is not tracked.
 - **Dataset scope.** The model is trained on the public IBM Telco Customer Churn dataset, not live customer data. Performance on other customer populations is unknown.
 - **Moderate precision.** Precision on the held-out test set is about 52.5%, so a number of customers flagged as likely to churn will not actually churn.
 - **SHAP is not causal.** Explanations show model contributions, not proven causes of churn.
 - **Rule-based assistant.** The investigation assistant is not an LLM and only reorganises existing model outputs using fixed rules.
 - **Human review required.** Recommendations are suggestions and do not trigger any automatic action.
-- **Not deployed.** The application has not been deployed publicly. It runs locally only.
-- **No authentication or database.** The current project has no user authentication, database integration, or cloud deployment.
+- **No authentication or database.** The current project has no user authentication or database integration.
 - **Frontend bundle size** has not been optimised.
 
 ---
@@ -534,6 +537,7 @@ The production build completed successfully. A non-fatal warning about a large J
 | 10 | Settings and backend health monitoring | 🟢 Completed |
 | 11 | Testing and quality checks | 🟢 Completed |
 | 12 | Documentation and deployment preparation | 🟢 Completed |
+| 13 | Cloud deployment of the React frontend and FastAPI backend | 🟢 Completed |
 
 ---
 
@@ -541,8 +545,6 @@ The production build completed successfully. A non-fatal warning about a large J
 
 The following are possible enhancements, not existing functionality:
 
-- Deploy the React frontend.
-- Deploy the FastAPI backend.
 - Optimise the frontend bundle size.
 - Expand automated test coverage.
 - Add additional customer analytics.
